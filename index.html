@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood Quote Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="quote-panel" aria-labelledby="app-title">
+        <div class="intro">
+          <p class="eyebrow">Mood based quote generator</p>
+          <h1 id="app-title">How are you feeling right now?</h1>
+          <p class="lede">
+            Type your mood or tap an emoji, then get a quote that meets you there.
+          </p>
+        </div>
+
+        <form class="mood-form" id="mood-form">
+          <label for="mood-input">Describe your mood</label>
+          <div class="input-row">
+            <input
+              id="mood-input"
+              name="mood"
+              type="text"
+              autocomplete="off"
+              placeholder="happy, tired, stressed, hopeful..."
+            />
+            <button class="primary-button" type="submit">Get quote</button>
+          </div>
+        </form>
+
+        <div class="emoji-grid" aria-label="Choose a mood">
+          <button type="button" class="mood-chip" data-mood="happy" aria-label="Happy mood">
+            <span aria-hidden="true">&#128522;</span>
+            Happy
+          </button>
+          <button type="button" class="mood-chip" data-mood="sad" aria-label="Sad mood">
+            <span aria-hidden="true">&#128532;</span>
+            Sad
+          </button>
+          <button type="button" class="mood-chip" data-mood="angry" aria-label="Angry mood">
+            <span aria-hidden="true">&#128548;</span>
+            Angry
+          </button>
+          <button type="button" class="mood-chip" data-mood="stressed" aria-label="Stressed mood">
+            <span aria-hidden="true">&#128565;&#8205;&#128171;</span>
+            Stressed
+          </button>
+          <button type="button" class="mood-chip" data-mood="tired" aria-label="Tired mood">
+            <span aria-hidden="true">&#128564;</span>
+            Tired
+          </button>
+          <button type="button" class="mood-chip" data-mood="hopeful" aria-label="Hopeful mood">
+            <span aria-hidden="true">&#127780;&#65039;</span>
+            Hopeful
+          </button>
+          <button type="button" class="mood-chip" data-mood="anxious" aria-label="Anxious mood">
+            <span aria-hidden="true">&#128543;</span>
+            Anxious
+          </button>
+          <button type="button" class="mood-chip" data-mood="confident" aria-label="Confident mood">
+            <span aria-hidden="true">&#128526;</span>
+            Confident
+          </button>
+        </div>
+
+        <article class="quote-card" aria-live="polite">
+          <p class="mood-label" id="mood-label">Pick a mood</p>
+          <blockquote id="quote-text">
+            Your quote will appear here.
+          </blockquote>
+          <div class="quote-actions">
+            <button type="button" class="secondary-button" id="another-button">Another</button>
+            <button type="button" class="secondary-button" id="copy-button">Copy</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
