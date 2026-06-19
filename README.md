@@ -1,4 +1,4 @@
-# Mood Quote Generator
+# quote-generator
 
 A simple browser quote generator that gives users a quote based on their mood.
 
@@ -18,4 +18,3 @@ Users can either:
 ## Run Locally
 
 Open `index.html` in a browser.
-
