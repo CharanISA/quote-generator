@@ -1,15 +1,16 @@
 :root {
-  --ink: #16202a;
-  --muted: #667085;
-  --paper: #fffdf8;
-  --panel: #ffffff;
-  --line: #d9e1e8;
-  --teal: #1e7f83;
-  --teal-dark: #135d61;
-  --rose: #e65f6e;
-  --sun: #f7b733;
-  --leaf: #74a84a;
-  --shadow: 0 24px 60px rgba(22, 32, 42, 0.16);
+  --ink: #f8edd0;
+  --muted: #cbbf9f;
+  --paper: #221914;
+  --panel: rgba(20, 23, 25, 0.88);
+  --panel-deep: #111719;
+  --line: rgba(211, 164, 82, 0.42);
+  --gold: #d8a64d;
+  --gold-bright: #f1cd78;
+  --jade: #36a37d;
+  --jade-dark: #1d6d5d;
+  --crimson: #9e2f32;
+  --shadow: 0 30px 90px rgba(0, 0, 0, 0.56);
 }
 
 * {
@@ -22,9 +23,22 @@ body {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 16% 18%, rgba(247, 183, 51, 0.28), transparent 28%),
-    radial-gradient(circle at 85% 24%, rgba(230, 95, 110, 0.2), transparent 26%),
-    linear-gradient(135deg, #f5fbfb 0%, #fff7ea 45%, #f7f2ff 100%);
+    linear-gradient(160deg, rgba(6, 10, 13, 0.92), rgba(21, 24, 22, 0.74)),
+    radial-gradient(circle at 18% 12%, rgba(216, 166, 77, 0.24), transparent 26%),
+    radial-gradient(circle at 84% 18%, rgba(158, 47, 50, 0.28), transparent 30%),
+    linear-gradient(135deg, #060a0d 0%, #15201f 48%, #2b1715 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(135deg, transparent 0 44%, rgba(216, 166, 77, 0.11) 44% 45%, transparent 45% 100%),
+    linear-gradient(45deg, transparent 0 56%, rgba(54, 163, 125, 0.09) 56% 57%, transparent 57% 100%);
+  background-size: 180px 180px;
+  mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
 }
 
 button,
@@ -40,15 +54,49 @@ input {
 }
 
 .quote-panel {
+  position: relative;
   width: min(920px, 100%);
   display: grid;
   gap: 22px;
   padding: clamp(22px, 4vw, 44px);
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255, 244, 214, 0.06), transparent 32%),
+    var(--panel);
+  border: 1px solid var(--line);
   border-radius: 8px;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow), inset 0 0 0 1px rgba(255, 238, 185, 0.06);
+  backdrop-filter: blur(16px);
+}
+
+.quote-panel::before,
+.quote-panel::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border: 1px solid rgba(216, 166, 77, 0.28);
+}
+
+.quote-panel::before {
+  inset: 10px;
+  border-radius: 6px;
+}
+
+.quote-panel::after {
+  width: 160px;
+  height: 160px;
+  right: -68px;
+  top: -68px;
+  rotate: 45deg;
+  background: rgba(54, 163, 125, 0.08);
+}
+
+.intro,
+.mood-form,
+.emoji-grid,
+.quote-card {
+  position: relative;
+  z-index: 1;
 }
 
 .intro {
@@ -56,9 +104,9 @@ input {
 }
 
 .eyebrow {
-  margin: 0 0 8px;
-  color: var(--teal-dark);
-  font-size: 0.82rem;
+  margin: 0 0 10px;
+  color: var(--gold-bright);
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -66,17 +114,20 @@ input {
 
 h1 {
   margin: 0;
-  font-size: clamp(2rem, 5vw, 4.5rem);
-  line-height: 0.98;
+  font-family: Cinzel, Georgia, serif;
+  font-size: clamp(2rem, 5vw, 4.4rem);
+  line-height: 1;
   letter-spacing: 0;
+  color: #fff4d5;
+  text-shadow: 0 3px 22px rgba(216, 166, 77, 0.24);
 }
 
 .lede {
-  max-width: 560px;
+  max-width: 620px;
   margin: 16px 0 0;
   color: var(--muted);
-  font-size: 1.06rem;
-  line-height: 1.6;
+  font-size: 1.04rem;
+  line-height: 1.65;
 }
 
 .mood-form {
@@ -85,7 +136,8 @@ h1 {
 }
 
 label {
-  font-weight: 700;
+  color: #f6dfad;
+  font-weight: 800;
 }
 
 .input-row {
@@ -99,15 +151,19 @@ input {
   min-height: 52px;
   padding: 0 16px;
   color: var(--ink);
-  background: var(--paper);
-  border: 1px solid var(--line);
+  background: rgba(17, 23, 25, 0.9);
+  border: 1px solid rgba(216, 166, 77, 0.46);
   border-radius: 8px;
   outline: none;
 }
 
+input::placeholder {
+  color: rgba(203, 191, 159, 0.74);
+}
+
 input:focus {
-  border-color: var(--teal);
-  box-shadow: 0 0 0 4px rgba(30, 127, 131, 0.14);
+  border-color: var(--gold-bright);
+  box-shadow: 0 0 0 4px rgba(216, 166, 77, 0.14);
 }
 
 .primary-button,
@@ -120,15 +176,17 @@ input:focus {
 }
 
 .primary-button {
-  padding: 0 20px;
-  color: #ffffff;
-  background: var(--teal);
-  font-weight: 800;
+  padding: 0 22px;
+  color: #101513;
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  border: 1px solid rgba(255, 238, 185, 0.45);
+  font-weight: 900;
+  box-shadow: 0 12px 28px rgba(216, 166, 77, 0.22);
 }
 
 .primary-button:hover,
 .primary-button:focus-visible {
-  background: var(--teal-dark);
+  background: linear-gradient(135deg, #ffe19a, #c98d36);
 }
 
 .emoji-grid {
@@ -143,10 +201,10 @@ input:focus {
   justify-content: center;
   gap: 8px;
   padding: 10px 12px;
-  color: var(--ink);
-  background: #ffffff;
-  border: 1px solid var(--line);
-  font-weight: 700;
+  color: #f8edd0;
+  background: rgba(17, 23, 25, 0.82);
+  border: 1px solid rgba(216, 166, 77, 0.28);
+  font-weight: 800;
 }
 
 .mood-chip span {
@@ -156,8 +214,10 @@ input:focus {
 .mood-chip:hover,
 .mood-chip:focus-visible,
 .mood-chip.active {
-  border-color: var(--teal);
-  box-shadow: 0 0 0 4px rgba(30, 127, 131, 0.1);
+  color: #fff7df;
+  border-color: var(--jade);
+  background: linear-gradient(135deg, rgba(54, 163, 125, 0.24), rgba(216, 166, 77, 0.12));
+  box-shadow: 0 0 0 4px rgba(54, 163, 125, 0.12);
 }
 
 .quote-card {
@@ -166,25 +226,28 @@ input:focus {
   min-height: 240px;
   padding: clamp(20px, 4vw, 34px);
   background:
-    linear-gradient(120deg, rgba(30, 127, 131, 0.1), rgba(247, 183, 51, 0.14)),
-    #ffffff;
-  border: 1px solid var(--line);
+    linear-gradient(120deg, rgba(216, 166, 77, 0.18), rgba(54, 163, 125, 0.1)),
+    linear-gradient(180deg, rgba(34, 25, 20, 0.94), rgba(17, 23, 25, 0.96));
+  border: 1px solid rgba(216, 166, 77, 0.48);
   border-radius: 8px;
+  box-shadow: inset 0 0 34px rgba(0, 0, 0, 0.22);
 }
 
 .mood-label {
   margin: 0;
-  color: var(--rose);
-  font-weight: 800;
+  color: var(--gold-bright);
+  font-weight: 900;
   text-transform: uppercase;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
 }
 
 blockquote {
   margin: 0;
-  font-size: clamp(1.45rem, 3vw, 2.45rem);
-  line-height: 1.18;
-  font-weight: 800;
+  font-family: Cinzel, Georgia, serif;
+  font-size: clamp(1.36rem, 3vw, 2.3rem);
+  line-height: 1.26;
+  font-weight: 700;
+  color: #fff2cc;
 }
 
 .quote-actions {
@@ -196,14 +259,15 @@ blockquote {
 
 .secondary-button {
   padding: 0 16px;
-  color: var(--teal-dark);
-  background: #e9f6f4;
-  font-weight: 800;
+  color: #fbe6b4;
+  background: rgba(54, 163, 125, 0.18);
+  border: 1px solid rgba(54, 163, 125, 0.5);
+  font-weight: 900;
 }
 
 .secondary-button:hover,
 .secondary-button:focus-visible {
-  background: #d5efeb;
+  background: rgba(54, 163, 125, 0.3);
 }
 
 @media (max-width: 720px) {
