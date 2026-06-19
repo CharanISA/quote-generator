@@ -1,63 +1,63 @@
 const quoteBank = {
   happy: [
-    "Let this good moment stretch its legs. You earned the light it is bringing.",
-    "Joy is not a distraction from life. Sometimes it is life telling you that you are in the right room.",
-    "Carry this feeling gently. Good days count too."
+    "When fortune smiles, do not merely celebrate. Store the warmth as fuel for the next ascent.",
+    "A bright mood is a resource. Spend it on action before the world asks for interest.",
+    "Even a harsh path has clear skies. Walk while the clouds have opened."
   ],
   sad: [
-    "Soft days still move forward. Be kind to the part of you that is carrying more than usual.",
-    "You do not have to bloom on command. Rest is also part of becoming.",
-    "A low moment is not a final answer. It is a weather report."
+    "A wounded heart can still refine resolve. Pain is bitter, but it can become medicine.",
+    "Do not mistake a low valley for the end of the road. Valleys are where roots learn depth.",
+    "Grief may dim your spirit today, but an ember guarded in silence can still become flame."
   ],
   angry: [
-    "Your fire is information. Let it point you toward what matters without letting it drive the whole car.",
-    "Pause long enough to choose your next move. Power grows when it has direction.",
-    "Anger can protect a boundary. Wisdom decides how to build the gate."
+    "Rage is raw power, but raw power wastes itself. Temper it, aim it, and let your next move be deliberate.",
+    "If the world provokes you, answer with strategy. A sharp mind cuts deeper than a loud outburst.",
+    "Anger can reveal what you refuse to surrender. Let it guard your boundary, not govern your hand."
   ],
   stressed: [
-    "One breath, one task, one next step. The whole mountain does not need to move at once.",
-    "You are allowed to lower the volume of the day and handle only what is truly next.",
-    "Pressure is loud, but it is not always correct. Return to the small thing you can do now."
+    "A mountain is not crossed in one leap. Choose the next foothold and make it yours.",
+    "When pressure surrounds you, narrow your world to one action. Momentum is built one breath at a time.",
+    "Chaos is loud, but it is rarely wise. Let the noise pass and move according to your purpose."
   ],
   tired: [
-    "Rest is not falling behind. It is how you return with your whole self.",
-    "Even the brightest minds need a dimmer switch. Let yourself power down.",
-    "You do not need to prove your worth by running on empty."
+    "A blade sharpened without pause will crack. Rest is not weakness; it is maintenance for future battles.",
+    "Even relentless ambition needs a quiet chamber. Recover, then return with steadier steps.",
+    "Running on emptiness is not discipline. Preserve the vessel that carries your will."
   ],
   hopeful: [
-    "Hope is a small lamp, not a guarantee. Still, it helps you see the next step.",
-    "Something in you still believes in tomorrow. That is a strong and beautiful signal.",
-    "Keep tending the possibility. Quiet faith has changed entire lives."
+    "Hope is a seed buried under stone. Protect it long enough, and even stone must answer to growth.",
+    "If your heart can still imagine a path, then the path has not vanished.",
+    "A distant peak is not a promise, but it gives the climber a direction."
   ],
   anxious: [
-    "Your thoughts may be sprinting, but you can walk. Come back to the ground under you.",
-    "Uncertainty does not mean danger. It means the next page has not been written yet.",
-    "Name one real thing in front of you. Let the present have a voice too."
+    "Fear imagines a thousand traps. Wisdom checks the ground beneath the next step.",
+    "Uncertainty is not always danger. Sometimes it is simply an unopened gate.",
+    "Let your thoughts run ahead if they must. Your feet only need to stand in the present."
   ],
   confident: [
-    "Stand in what you know. You have practiced for more moments than you remember.",
-    "Confidence is not noise. It is trust with its shoulders relaxed.",
-    "Walk in like your effort belongs there, because it does."
+    "Confidence is quiet when it is real. It does not beg the room to notice its strength.",
+    "Walk as one who has paid the price of practice. Your effort has earned its posture.",
+    "A steady will does not need permission from the crowd."
   ],
   calm: [
-    "Peace does not need to announce itself. It can simply sit beside you and stay.",
-    "Let the quiet be enough for now.",
-    "A steady heart can make even an ordinary hour feel spacious."
+    "Still water reflects the sky clearly. A still mind sees the path without distortion.",
+    "Quiet is not emptiness. It is space where intention can gather.",
+    "A calm heart turns ordinary moments into a hidden sanctuary."
   ],
   lonely: [
-    "Being alone right now does not mean you are unloved. Connection can still find its way back in.",
-    "You are still part of the world, even on the days it feels far away.",
-    "Reach for one small thread of contact. Small warmth is still warmth."
+    "A solitary road is still a road. Do not confuse silence around you with absence within you.",
+    "Those who walk alone learn the sound of their own resolve.",
+    "Loneliness can hollow the heart, but it can also make room for a stronger self to form."
   ],
   motivated: [
-    "Start while the spark is here. Momentum loves a doorway.",
-    "You do not need the whole path to begin. Begin, and the path gets more specific.",
-    "Use this energy with care. A focused hour can change the shape of a week."
+    "When intent rises, act before hesitation collects a tax.",
+    "A single focused hour can refine more than a day spent drifting.",
+    "Use this surge with precision. Ambition without direction is only smoke."
   ],
   default: [
-    "However you arrive today, start with honesty and one gentle next step.",
-    "Your mood is a message, not a verdict. Listen, then choose with care.",
-    "Meet yourself where you are, then move one inch toward where you want to be."
+    "Whatever your mood, treat it as material for refinement. Nothing within you has to be wasted.",
+    "The world changes by force, patience, and choice. Begin with the choice you can make now.",
+    "A path is not found by staring at the horizon. It is made by the next step."
   ]
 };
 
