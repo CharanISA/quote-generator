@@ -1,11 +1,15 @@
 # quote-generator
 
-A simple browser quote generator that gives users original cultivation-inspired quotes based on their mood.
+A landing-page quote generator that gives users original web novel-inspired flashcard quotes based on their mood.
+
+![Landing page](assets/landing.png)
+
+![Quote flashcard](assets/flashcard.png)
 
 Users can either:
 
-- Type how they are feeling, such as `happy`, `stressed`, `tired`, or `hopeful`
 - Select an emoji mood button
+- Generate a random quote
 - Generate another original inspired quote for the same mood
 - Copy the quote
 
